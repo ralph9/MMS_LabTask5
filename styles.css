@@ -191,3 +191,14 @@ input#buttonSubmit:hover{
 p#textQuizResult{
   font-size: 22px;
 }
+
+form{
+  font-size: 20px;
+}
+
+div#aboutUsCentralPanel{
+  font-size: 20px;
+}
+ div#coronaInfoCentral, div#mainCentral{
+   font-size: 18px;
+ }
