@@ -1,10 +1,10 @@
 atLeastSomeData = false;
-var basicSymptoms = ["fever", "cough", "tiredness"];
+var basicSymptoms = ["fever", "dry_cough", "tiredness"];
 var mediumSymptoms = ["aches_and_pains", "throat", "diarrhea", "conjunctivitis", "headache", "smell", "skin"];
 var seriousSymptoms = ["breathing", "chest_pain", "speech"];
 
-var messages = ["Great! you seem to be alright, in any case follow the rules and be careful", "Your current state makes you a likely candidate for coronavirus, althought it's early to say. Stay home as much as possible and follow all the precautions indicated",
-"You could be infected, please contact the necessary authorities and check on your nearest hospital"];
+var messages = ["You seem to be alright for now, in any case follow the rules and be careful", "Your current state makes you a likely candidate for coronavirus, althought it's early to say. Stay home as much as possible and follow all the precautions indicated",
+"You could be infected, please contact the necessary authorities and get checked on the nearest hospital"];
 
 $("input#buttonSubmit").click(function(event){
   if(!atLeastSomeData){
@@ -33,7 +33,7 @@ $('form').on('submit', function (event) {
 
 
 function displayQuizResult(messageToDisplay){
-  $("div.centralDiv").html("<img src='loading.gif' style='display:block;margin-left:auto;margin-right:auto;'>");
+  $("div.centralDiv").html("<img src='images/loading.gif' style='display:block;margin-left:auto;margin-right:auto;'>");
   setTimeout(function(){
   $("div.centralDiv").html("<p id='textQuizResult'>" + messageToDisplay + "</p>");
 }, 2000);
@@ -44,10 +44,12 @@ function displayQuizResult(messageToDisplay){
 function checkQuiz(checkedIds){
   finalPunctuation = 0;
   somethingSerious = false;
+  //console.log("ids");
+  //console.log(checkedIds);
   for (word in checkedIds){
     word = checkedIds[word];
     if(basicSymptoms.includes(word)){
-      finalPunctuation += 1;
+      finalPunctuation = finalPunctuation + 1;
     }
     if(mediumSymptoms.includes(word)){
       finalPunctuation = finalPunctuation + 3;
@@ -57,8 +59,8 @@ function checkQuiz(checkedIds){
       somethingSerious = true;
     }
   }
-  console.log("final");
-  console.log(finalPunctuation);
+  //console.log("final");
+  //console.log(finalPunctuation);
   if(finalPunctuation > 10 || somethingSerious){
     console.log("hospital");
     return 2;
