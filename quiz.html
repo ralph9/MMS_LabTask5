@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <title>Quiz for assessment</title>
+</head>
+<body>
+
+<div id='cssmenu' >
+<ul>
+   <li><a href='index.html'><span>Home</span></a></li>
+   <li><a href='coronaInfo.html'><span>Corona Information</span></a></li>
+   <li><a href='stats.html'><span>Country Stats</span></a></li>
+   <li class='active'><a href='quiz.html'><span>Quiz</span></a></li>
+   <li class='last'><a href='creatorsInfo.html'><span>About us</span></a></li>
+</ul>
+</div>
+
+<div class="centralDiv">
+    <h1>Quiz</h1>
+    <p> Answer these questions and you will get a result and some tips about corona. Check the sympthoms that you have.</p>
+    <form>
+        Common sympthoms:
+        <br>
+          <input type="checkbox" id="fever" name="fever" value="Fever">
+          <label for="fever"> Usual fever</label><br>
+          <input type="checkbox" id="dry_cough" name="dry_cough" value="cough">
+          <label for="dry_cough"> Dry cough</label><br>
+          <input type="checkbox" id="tiredness" name="tiredness" value="tiredness">
+          <label for="tiredness"> Tiredness</label><br><br>
+
+        Less common symptoms:<br>
+        <input type="checkbox" id="aches" name="aches_and_pains" value="aches_and_pains">
+          <label for="aches"> Aches and pains</label><br>
+          <input type="checkbox" id="throat" name="throat" value="throat">
+          <label for="throat">Sore throat</label><br>
+        <input type="checkbox" id="Diarrhoea" name="Diarrhoea" value="Diarrhoea">
+          <label for="Diarrhoea">Diarrhoea</label><br>
+        <input type="checkbox" id="Conjunctivitis" name="Conjunctivitis" value="Conjunctivitis">
+          <label for="Conjunctivitis">Conjunctivitis</label><br>
+        <input type="checkbox" id="Headache" name="Headache" value="Headache">
+          <label for="Headache">Headache</label><br>
+        <input type="checkbox" id="smell" name="smell" value="smell">
+          <label for="smell">Loss of taste or smell</label><br>
+        <input type="checkbox" id="skin" name="skin" value="skin">
+          <label for="skin">A rash skin, or discolouration of fingers or toes</label><br><br>
+        Serious symptoms:<br>
+        <input type="checkbox" id="breathing" name="breathing" value="breathing">
+          <label for="breathing">Difficulty breathing or shortness of breath</label><br>
+        <input type="checkbox" id="chest_pain" name="chest_pain" value="chest_pain">
+          <label for="chest_pain">Chest pain or pressure</label><br>
+        <input type="checkbox" id="speech" name="speech" value="speech">
+          <label for="speech">Loss of speech or movement</label><br><br>
+
+        <input type="submit" value="Submit" id="buttonSubmit"><br>
+      </form>
+      </div>
+
+      <div id="map"></div>
+
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="location.js">
+        </script>
+<script src="scriptQuiz.js">
+</script>
+</body>
+</html>

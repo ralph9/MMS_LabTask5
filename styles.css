@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'JostRegular';
+  src: url('fonts/Jost-Regular.ttf')  format('truetype');
+}
+
+body{
+  font-family: 'JostRegular';
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 1.7;
+}
+
+div#numberOfConfirmed, div#countryForData, div#numberOfDeaths, div#numberOfRecovered{
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+div#mainPanel{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+div#countryForData, div#numberOfConfirmed, div#numberOfDeaths{
+  margin-bottom: 25px;
+}
+
+select#countriesSelect{
+  margin: 40px;
+}
+
+#cssmenu {
+  background: #f96e5b;
+  width: auto;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height:2.5;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #333333;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+
+#cssmenu ul li.active a {
+  color: #333333;
+}
+
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
+
+
+div.centralDiv{
+  margin: 80px auto;
+  width: 65%;
+  text-align: justify;
+}
+
+
+div.centralDivStats{
+  margin: 80px auto;
+  width: 65%;
+  text-align: center;
+}
+
+input#buttonSubmit{
+  font-size: 16px;
+  width: 100px;
+  margin-left: 20px;
+  padding: 10px;
+  border:1px solid white;
+  background-color: #95a5a6;
+}
+
+input#buttonSubmit:hover{
+  padding: 10px;
+  border:2px solid black;
+  cursor: pointer;
+  background-color: #7f8c8d;
+}
+
+
+p#textQuizResult{
+  font-size: 22px;
+}
